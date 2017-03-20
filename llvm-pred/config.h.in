@@ -1,0 +1,24 @@
+#ifndef LLE_CONFIG_H_H
+#define LLE_CONFIG_H_H
+
+#cmakedefine LLVM_VERSION_MAJOR @LLVM_VERSION_MAJOR@
+#cmakedefine LLVM_VERSION_MINOR @LLVM_VERSION_MINOR@
+#ifndef NO_DEBUG
+#cmakedefine NO_DEBUG
+#endif
+#cmakedefine ANNOY_DEBUG 
+#define PROMOTE_FREQ_@PROMOTE_FREQ@
+#cmakedefine TC_USE_SCEV
+#cmakedefine DELETE_STORE
+#cmakedefine DELETE_RETURN
+#cmakedefine USE_CACHE
+#cmakedefine USE_PROMOTE
+#cmakedefine USE_DOUBLE_ARRAY
+// DDGraph::expr() print ref number. to simplify presentation
+#define EXPR_ENABLE_REF 
+// a special symbol for self reference
+#define PHINODE_CIRCLE "Δ"
+// a ddg would produce better string expr for loop cycle(tripcount)cycle
+#define CYCLE_EXPR_USE_DDG
+
+#endif
